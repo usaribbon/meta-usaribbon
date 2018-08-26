@@ -2,8 +2,8 @@
 
 
 ## 目標
-minimalをbuildする
-
+* minimalをbuildする
+* bbexampleをつかってcプログラムも一緒にビルドできることを確認する
 
 ## はじめる
 ### 環境
@@ -38,7 +38,12 @@ $ bitbake -k core-image-minimal
 Adding new recipes to the build system のあたりを参考にする
 https://wiki.yoctoproject.org/wiki/Building_your_own_recipes_from_first_principles
 
+* bbusaribbon-rt_1.0.bbはリモート経由でソースをとってくる
+* ltはローカルから
+* build/laylor.confに自分のmetaを追加する
+* 追加したあと、bitbake bbusaribbon-rt
 
+## エラーいろいろ
 ### bitbake complains if run as root
 root@eb4b9143265d:/work/build-test01# bitbake -k core-image-sato
 ERROR:  OE-core's config sanity checker detected a potential misconfiguration.
